@@ -15,7 +15,7 @@ import (
 func main() {
   r := gin.New() // without any middlewares
 
-  router.Use(requestid.RequestID())
+  r.Use(requestid.RequestID())
 
   r.Get("/", func() string {
     return "Hello world!"
